@@ -1,0 +1,13 @@
+{% extends "moominmugs/base.html" %}
+
+{% block content %}
+	<h1>Figures</h1>
+	{% for figure in object_list %}
+		<p>
+		{{ figure.name }}
+		<a href="{{ figure.get_absolute_url }}/update">Edit</a>
+		<a href="{{ figure.get_absolute_url }}/delete">Delete</a>
+		</p>
+	{% endfor %}
+	<a href="/figures/new">Add new figure</a>
+{% endblock content %}

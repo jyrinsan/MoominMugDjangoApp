@@ -1,0 +1,13 @@
+{% extends "moominmugs/base.html" %}
+
+{% block content %}
+	<h1>Colors</h1>
+	{% for color in object_list %}
+		<p>
+			{{ color.name }}
+			<a href="{{ color.get_absolute_url }}/update">Edit</a>
+			<a href="{{ color.get_absolute_url }}/delete">Delete</a>
+		</p>
+	{% endfor %}
+	<a href="/colors/new">Add new color</a>
+{% endblock content %}

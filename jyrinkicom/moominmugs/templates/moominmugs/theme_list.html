@@ -1,0 +1,14 @@
+{% extends "moominmugs/base.html" %}
+
+{% block content %}
+	<h1>Themes</h1>
+	{% for theme in object_list %}
+		<p>
+			{{ theme.name }}
+			<a href="{{ theme.get_absolute_url }}/update">Edit</a>
+			<a href="{{ theme.get_absolute_url }}/delete">Delete</a>
+		</p>
+	{% endfor %}
+	</table>
+	<a href="/themes/new">Add new theme</a>
+{% endblock content %}
