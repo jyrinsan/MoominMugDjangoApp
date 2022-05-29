@@ -1,8 +1,14 @@
 {% extends "moominmugs/base.html" %}
 
-{% block content %}
-	<h1>Moomin mug</h1>
+{% block mugactive %}
+	class="active"
+{% endblock mugactive %}
 
+{% block header %}
+	<h1>Moomin mug</h1>
+{% endblock header %}
+
+{% block content %}
 	<p><img src="{{ object.image.url }}" width=200></p>
 
 	<p>Nickname: {{ object.nickname }}</p>

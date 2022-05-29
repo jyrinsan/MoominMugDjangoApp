@@ -1,10 +1,16 @@
 {% extends "moominmugs/base.html" %}
 
-{% block content %}
-	<h1>Delete Figure?</h1>
+{% block figureactive %}
+	class="active"
+{% endblock figureactive %}
 
+{% block header %}
+	<h1>Delete Figure?</h1>
+{% endblock header %}
+
+{% block content %}
 	<form method="post">{% csrf_token %}
 	    <p>Are you sure you want to delete "{{ object.name }}"?</p>
-	    <input type="submit" value="Confirm">
+	    <input class="button" type="submit" value="Confirm">
 	</form>
 {% endblock content %}

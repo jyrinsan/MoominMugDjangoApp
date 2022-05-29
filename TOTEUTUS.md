@@ -4,6 +4,7 @@ Asensin koneelle seuraavat ohjelmat
 - micro
 - pwgen
 - virtualenv
+- sqlite3
 
 Loin kotihakemistossani hakemiston uudelle projektille `miniprojekti`
 ```bash
@@ -21,7 +22,10 @@ which pip # tarkastetaan, että polku env:n sisällä
 
 Asensin djangon 
 ```bash
-micro requirements.txt # sisällöksi django==3.2 Pillow
+micro requirements.txt 
+# requirements-txt sisältö 
+# django==3.2 
+# Pillow
 pip install -r requirements.txt
 django-admin --version # tarkistetaan asennus
 ```
@@ -52,12 +56,22 @@ micro jyrinkicom/settings.py # lisätään sovellus INSTALLED_APPS kohtaan
 - restarttaan kehitysserverin
 - listasivu: urls.py, views.py, *.html
 - detail, update, create, delete
-- 
 
 Login
 - urls.py, views.py
 - templates/registration hakemisto
-- loginsivu
+- templates/registration/login.html
+
+Pagination
+- ListView:eissä määritellään sivutuksen koko
+- html-tiedoistoissa määritellään sivutus
+- css tyylit
+- [ohje](https://docs.djangoproject.com/en/4.0/topics/pagination/)
 
 Imaget
 https://stackoverflow.com/questions/42752591/how-to-find-django-imagefield-url
+
+Tyylisivut
+https://www.w3schools.com/css
+
+Sivutus

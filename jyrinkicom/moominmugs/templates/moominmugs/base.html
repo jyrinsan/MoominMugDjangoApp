@@ -2,18 +2,111 @@
 <html lang="en">
   <head>
     <title>Moomin Mugs</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://css.gg/trash.css' rel='stylesheet'>
+	<link href='https://css.gg/pen.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	
+    <style>
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li span {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover:not(.active) {
+		  background-color: #111;
+		}
+
+		.active {
+		  background-color: #04AA6D;
+		}
+
+		.button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		}
+
+		img.thumbnail {
+		  border-radius: 8px;
+		  border: 1px solid #ddd;
+		  padding: 2px;
+		  width: 100px;
+		}
+
+		img {
+		  border-radius: 8px;
+		  width: 300px;
+		}
+		.grid-container {
+		  display: grid;
+		  grid-template-columns: auto auto auto auto;
+		}
+		.grid-item {
+		  padding: 20px;
+		  font-size: 12px;
+		  text-align: left;
+		}
+		td {
+			padding: 10px;	
+		}
+		.pagination {
+			padding: 20px;
+		}
+
+  	</style>
+  </head>  
   <body>
-  	<p>
-  		<a href="/moominmugs">Mugs</a>
-  		<a href="/figures">Figures</a>
-  		<a href="/colors">Colors</a>
-  		<a href="/themes">Themes</a>
-  	</p>
-    {% block content %}
-    	<p>some block content here</p>
-    {% endblock content %}
-  </body>
+		<ul>
+			<li><a {% block mugactive %}{% endblock mugactive %} href="/moominmugs">Home</a></li>
+		    <li><a {% block figureactive %}{% endblock figureactive %} href="/figures">Figures</a></li>
+		    <li><a {% block coloractive %}{% endblock coloractive %} href="/colors">Colors</a></li>
+		    <li><a {% block themeactive %}{% endblock themeactive %}href="/themes">Themes</a></li>
+		    <li style="float:right">
+		      {% if user.is_authenticated %}
+		        <a href="{% url 'logout' %}?next=/moominmugs">Logout</a>
+		      {% else %}
+				<a {% block loginactive %}{% endblock loginactive %}h href="{% url 'login' %}?next=/moominmugs">Login</a>
+		      {% endif %}
+		    </li>	
+		    <li style="float:right"><span>{% if user.is_authenticated %}User: {{ user.username }}{% endif %}</span></li>	
+		</ul>
+		{% block header %}
+			<h1>Moomin Mugs</h1>
+		{% endblock header %}
+		<div>
+		    {% block content %}
+			  <p>some block content here</p>		  
+		    {% endblock content %}
+	  	</div>  
+ </body>
 </html>
