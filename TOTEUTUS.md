@@ -73,5 +73,3 @@ https://stackoverflow.com/questions/42752591/how-to-find-django-imagefield-url
 
 Tyylisivut
 https://www.w3schools.com/css
-
-Sivutus
