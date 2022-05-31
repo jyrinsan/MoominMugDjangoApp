@@ -1,5 +1,9 @@
 # MoominMugDjangoApp
 
+<kbd><img src="images/screenshot1.PNG" /></kbd>
+
+<kbd><img src="images/screenshot2.PNG" /></kbd>
+
 # Linkki demoon
 
 Huom! Demossa tuotantopalvelimella ei jostain syystä näy tallentuneet kuvat, mutta ne tallentuvat kyllä palvelimelle. Kehitysympäristössä kuvat näkyivät ok, enkä saanut ongelmaa selville.
