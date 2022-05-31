@@ -1,0 +1,20 @@
+{% extends "moominmugs/base.html" %}
+
+{% block figureactive %}
+	class="active"
+{% endblock figureactive %}
+
+{% block header %}
+	<h1>Figure</h1>
+{% endblock header %}
+
+{% block content %}
+	<form method="post">{% csrf_token %}
+		<table>
+			<tbody align="left">
+				{{ form.as_table }}
+			</tbody>
+		</table>
+		<input class="button" type="submit" value="Save">
+	</form>
+{% endblock content %}

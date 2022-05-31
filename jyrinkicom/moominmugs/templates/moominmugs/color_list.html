@@ -1,0 +1,46 @@
+{% extends "moominmugs/base.html" %}
+
+{% block coloractive %}
+	class="active"
+{% endblock coloractive %}
+
+{% block header %}
+	<h1>Colors</h1>
+{% endblock header %}
+
+{% block content %}
+	<table>
+	{% for color in object_list %}
+		<tr>
+			<td>{{ color.name }}</td>
+			{% if user.is_authenticated %}
+			<td class="icon"><a class="gg-pen" href="{{ color.get_absolute_url }}/update"></a></td>
+			<td class="icon"><a class="gg-trash" href="{{ color.get_absolute_url }}/delete"></a></td>
+			{% endif %}	
+		</tr>
+			
+	{% endfor %}
+	</table>
+	
+	<div class="pagination">
+		<span class="step-links">
+			{% if page_obj.has_previous %}
+			<a href="?page=1">&laquo; first</a>
+			<a href="?page={{ page_obj.previous_page_number }}">previous</a>
+		{% endif %}
+
+			<span class="current">
+				Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+			</span>
+
+			{% if page_obj.has_next %}
+				<a href="?page={{ page_obj.next_page_number }}">next</a>
+			    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+			{% endif %}
+		</span>
+	</div>
+	
+	{% if user.is_authenticated %}
+		<div><a class="button" href="/colors/new">Add color</a></div>
+	{% endif %}
+{% endblock content %}
