@@ -2,6 +2,8 @@
 
 # Linkki demoon
 
+Huom! Demossa tuotantopalvelimella ei jostain syystä näy tallentuneet kuvat, mutta ne tallentuvat kyllä palvelimelle. Kehitysympäristössä kuvat näkyivät ok, enkä saanut ongelmaa selville.
+
 [http://jyrinki.com/moominmugs](http://jyrinki.com/moominmugs)
 
 # Yleiskuvaus
@@ -15,6 +17,8 @@ Haaga-Helian Python weppipalvelu - ideasta tuotantoon kurssin loppuprojekti
 Sovelluksen tekijä: Sanna Jyrinki
 
 Sovelluksen lisenssi: [GNU GENERAL PUBLIC LICENSE2](../LICENSE)
+
+Sovelluksen vaihe: Beta
 
 ## Asennus
 
