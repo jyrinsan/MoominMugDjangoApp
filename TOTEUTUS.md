@@ -68,7 +68,7 @@ Pagination
 - css tyylit
 - [ohje](https://docs.djangoproject.com/en/4.0/topics/pagination/)
 
-Imaget
+ImageField
 https://stackoverflow.com/questions/42752591/how-to-find-django-imagefield-url
 
 Tyylisivut
