@@ -22,6 +22,8 @@ Sovelluksen lisenssi: [GNU GENERAL PUBLIC LICENSE2](../LICENSE)
 
 Sovelluksen vaihe: Beta
 
+[Latauslinkki](https://github.com/jyrinsan/MoominMugDjangoApp/archive/refs/heads/master.zip)
+
 ## Asennus kehityspalvelimelle
 
 Kloonaa github repositoryni esim. kotihakemistoosi Linuxille
