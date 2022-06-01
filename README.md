@@ -8,6 +8,10 @@
 
 [http://jyrinki.com/moominmugs](http://jyrinki.com/moominmugs)
 
+# Latauslinkki
+
+[Latauslinkki](https://github.com/jyrinsan/MoominMugDjangoApp/archive/refs/heads/master.zip)
+
 # Yleiskuvaus
 MoominMug on Djangolla toteutettu webbisovellus, jossa voi webbiselaimella selata muumimukieni listaa, sekä lisätä, muokata ja poistaa mukeja. Kaikkeen tallentamiseen pitää olla kirjautunut käyttäjä, selailla voi ilman kirjautumista. Vain superuser(=minä) voi luoda uusia käyttäjiä admin-käyttöliittymältä.
 
@@ -21,8 +25,6 @@ Sovelluksen tekijä: Sanna Jyrinki
 Sovelluksen lisenssi: [GNU GENERAL PUBLIC LICENSE2](../LICENSE)
 
 Sovelluksen vaihe: Beta
-
-[Latauslinkki](https://github.com/jyrinsan/MoominMugDjangoApp/archive/refs/heads/master.zip)
 
 ## Asennus kehityspalvelimelle
 
